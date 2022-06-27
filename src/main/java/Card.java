@@ -1,13 +1,19 @@
+import java.util.List;
+
 public class Card {
 
-    public Suit suit;
-    public Rank rank;
-    public int value;
+    //private fields
+    private Suit suit;
+    private Rank rank;
+    private Boolean visible;
+//    private int value;
 
-    public Card(Suit suit, Rank rank, int value) {
+    //constructor
+    public Card(Suit suit, Rank rank) {
         this.suit = suit;
         this.rank = rank;
-        this.value = value;
+        visible = true;
+//        this.value = value;
 
     }
 
@@ -28,16 +34,25 @@ public class Card {
         this.rank = rank;
     }
 
-    public int getValue() {
-        return value;
+    public String toString() {
+        String str = "";
+        if(visible) {
+            str += rank.getRank() + " of " + suit.getSuitText();
+        }
+        else
+        {
+            str = "Back of Card";
+        }
+        return str;
     }
 
-    public void setValue(int value) {
-        this.value = value;
-    }
 
-    public String cardToString() {
-        return this.rank + " " + this.suit;
-    }
+//    public String cardToString() {
+//        return this.rank + " " + this.suit;
+//    }
+
+
+
+
 }
 
