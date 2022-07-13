@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Deck {
 
@@ -9,6 +10,8 @@ public class Deck {
     public Deck() {
         this.deck = new ArrayList<Card>();
     }
+
+    Random random = new Random();
 
     //methods
     //create deck method
@@ -34,4 +37,18 @@ public class Deck {
         }
         return cards;
     }
+
+    //shuffle method
+    public void shuffle() {
+        for (int i = deck.size() -1; i > 0; i--) {
+            //swap random card with last card of loop
+            int pick = random.nextInt(i);
+            Card randCard = deck.get(pick);
+            Card lastCard = deck.get(i);
+            deck.set(i, randCard);
+            deck.set(pick, lastCard);
+        }
+    }
+
+
 }

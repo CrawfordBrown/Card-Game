@@ -8,7 +8,10 @@ public class GameLogic {
 
         deck.populateDeck();
 
+        deck.shuffle();
 
         System.out.println(deck.showDeck());
+
+        System.out.println(deck.deckSize());
     }
 }
