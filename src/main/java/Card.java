@@ -37,7 +37,7 @@ public class Card {
     public String toString() {
         String str = "";
         if(visible) {
-            str += rank.getRank() + " of " + suit.getSuitText();
+            str += rank.printRank() + " of " + suit.getSuitText();
         }
         else
         {
