@@ -22,4 +22,6 @@ public class TestCard {
     public void testGetValue() {
         assertEquals(card2.getRankValue(), 14);
     }
+
+    
 }

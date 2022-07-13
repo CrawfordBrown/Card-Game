@@ -7,7 +7,7 @@ public class Deck {
 
     //constructor
     public Deck() {
-        deck = new ArrayList<Card>();
+        this.deck = new ArrayList<Card>();
     }
 
     //methods
@@ -23,7 +23,15 @@ public class Deck {
 
     //size of deck method
     public int deckSize() {
-        return deck.size();
+        return this.deck.size();
     }
 
+    //print deck method
+    public String showDeck() {
+        String cards = "";
+        for (Card card: this.deck) {
+            cards += card.toString() + "\n";
+        }
+        return cards;
+    }
 }

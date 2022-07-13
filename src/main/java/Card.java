@@ -52,11 +52,6 @@ public class Card {
         return value;
     }
 
-//    public String cardToString() {
-//        return this.rank + " " + this.suit;
-//    }
-
-
 
 
 }
