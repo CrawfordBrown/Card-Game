@@ -6,14 +6,12 @@ public class Card {
     private Suit suit;
     private Rank rank;
     private Boolean visible;
-//    private int value;
 
     //constructor
     public Card(Suit suit, Rank rank) {
         this.suit = suit;
         this.rank = rank;
         visible = true;
-//        this.value = value;
 
     }
 
@@ -34,6 +32,7 @@ public class Card {
         this.rank = rank;
     }
 
+
     public String toString() {
         String str = "";
         if(visible) {
@@ -46,6 +45,12 @@ public class Card {
         return str;
     }
 
+    public int getRankValue() {
+        int value = 0;
+        if (visible)
+            value += rank.getRank();
+        return value;
+    }
 
 //    public String cardToString() {
 //        return this.rank + " " + this.suit;

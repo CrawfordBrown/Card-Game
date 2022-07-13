@@ -18,8 +18,8 @@ public class TestCard {
         assertEquals(card2.toString(), "Ace of Hearts");
     }
 
-//    @Test
-//    public void testGetValue() {
-//        assertEquals(card.getValue(), 14);
-//    }
+    @Test
+    public void testGetValue() {
+        assertEquals(card2.getRankValue(), 14);
+    }
 }
