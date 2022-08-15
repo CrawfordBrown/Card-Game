@@ -3,9 +3,9 @@ import java.util.List;
 public class Card {
 
     //private fields
-    private Suit suit;
-    private Rank rank;
-    private Boolean visible;
+    public Suit suit;
+    public Rank rank;
+    public Boolean visible;
 
     //constructor
     public Card(Suit suit, Rank rank) {
@@ -50,6 +50,10 @@ public class Card {
         if (visible)
             value += rank.getRank();
         return value;
+    }
+
+    public void flipCard() {
+        visible = !visible;
     }
 
 

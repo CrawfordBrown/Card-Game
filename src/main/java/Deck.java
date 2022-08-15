@@ -4,7 +4,7 @@ import java.util.Random;
 public class Deck {
 
     //private fields
-    private ArrayList<Card> deck;
+    static ArrayList<Card> deck;
 
     //constructor
     public Deck() {
@@ -47,6 +47,24 @@ public class Deck {
             Card lastCard = deck.get(i);
             deck.set(i, randCard);
             deck.set(pick, lastCard);
+        }
+    }
+
+    public static void deal(Player player) {
+        for (int i = 0; i <= 2; i++) {
+            Card dealCard = deck.get(0);
+            deck.remove(0);
+            player.downHand.add(dealCard);
+        }
+        for (int i = 0; i <= 2; i++) {
+            Card dealCard = deck.get(0);
+            deck.remove(0);
+            player.upHand.add(dealCard);
+        }
+        for (int i = 0; i <= 2; i++) {
+            Card dealCard = deck.get(0);
+            deck.remove(0);
+            player.hand.add(dealCard);
         }
     }
 
