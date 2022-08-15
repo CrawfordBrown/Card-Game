@@ -20,4 +20,10 @@ public class Player extends Hand {
 
         }
 
+        public void playCard(int index) {
+            Card playedCard = Player.hand.get(index);
+            Player.hand.remove(playedCard);
+            Deck.playedCards.add(playedCard);
+        }
+
 }

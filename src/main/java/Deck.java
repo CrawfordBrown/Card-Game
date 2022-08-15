@@ -5,10 +5,12 @@ public class Deck {
 
     //private fields
     static ArrayList<Card> deck;
+    static ArrayList<Card> playedCards;
 
     //constructor
     public Deck() {
         this.deck = new ArrayList<Card>();
+        this.playedCards = new ArrayList<Card>();
     }
 
     Random random = new Random();
@@ -36,6 +38,15 @@ public class Deck {
             cards += card.toString() + "\n";
         }
         return cards;
+    }
+
+    //print deck method
+    public String showPlayedCards() {
+        String cardsPlayed = "";
+        for (Card card2: this.playedCards) {
+            cardsPlayed += card2.toString() + "\n";
+        }
+        return cardsPlayed;
     }
 
     //shuffle method

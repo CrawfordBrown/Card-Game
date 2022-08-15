@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Hand {
 
     //3 cards the player holds
-    public ArrayList<Card> hand;
+    public static ArrayList<Card> hand;
 
     //3 cards face up
     public ArrayList<Card> upHand;

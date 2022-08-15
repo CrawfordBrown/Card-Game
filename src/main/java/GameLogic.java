@@ -5,6 +5,7 @@ public class GameLogic {
 
        // card.toString();
         Deck deck = new Deck();
+        Deck playedCards = new Deck();
 
         deck.populateDeck();
 
@@ -30,5 +31,10 @@ public class GameLogic {
         System.out.println(deck.deckSize());
 
 
+        player1.playCard(0);
+
+        System.out.println(playedCards.showPlayedCards());
+
+        System.out.println(player1.showHand());
     }
 }
